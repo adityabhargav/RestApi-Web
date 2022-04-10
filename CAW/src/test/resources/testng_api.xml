@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CAW Api Automation Testing Suite" parallel="tests" thread-count="2">
+    <test name="Api Tests" preserve-order="true">
+        <parameter name="browser" value="api"></parameter>
+        <classes>
+            <class name="com.runner.caw.ApiRunner">
+                <methods>
+                    <include name="AddUser"/>
+                    <include name="FetchUserInvalidToken"/>
+                    <include name="FetchUser"/>
+                    <include name="AddContact"/>
+                    <include name="UpdateContact"/>
+                    <include name="DeleteContact"/>
+                    <include name="GetContact"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
